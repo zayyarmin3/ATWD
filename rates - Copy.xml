@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<currencies at="05 Nov 2016 18:48">
+    <currency id="GBP">
+        <name>Pound Sterling</name>
+        <loc>Locations</loc>
+        <rate>1</rate>
+    </currency>
+    <currency id="CAD">
+        <name>Canada Dollar</name>
+        <loc>Locations</loc>
+        <rate>1.6760</rate>
+    </currency>
+    <currency id="CHF">
+        <name>Swiss Franc</name>
+        <loc>Locations</loc>
+        <rate>1.2103</rate>
+    </currency>
+    <currency id="CNY">
+        <name>Chinese Yuan Renminbi</name>
+        <loc>Locations</loc>
+        <rate>8.4534</rate>
+    </currency>
+    <currency id="DKK">
+        <name>Danish Krone</name>
+        <loc>Locations</loc>
+        <rate>8.3650</rate>
+    </currency>
+    <currency id="EUR">
+        <name>Euro</name>
+        <loc>Locations</loc>
+        <rate>1.1224</rate>
+    </currency>
+    <currency id="HKD">
+        <name>Hong Kong Dollar</name>
+        <loc>Locations</loc>
+        <rate>9.7050</rate>
+    </currency>
+    <currency id="HUF">
+        <name>Hungarian Forint</name>
+        <loc>Locations</loc>
+        <rate>345.5000</rate>
+    </currency>
+    <currency id="INR">
+        <name>Indian Rupee</name>
+        <loc>Locations</loc>
+        <rate>83.5762</rate>
+    </currency>
+    <currency id="JPY">
+        <name>Japanese Yen</name>
+        <loc>Locations</loc>
+        <rate>129.0600</rate>
+    </currency>
+    <currency id="MXN">
+        <name>Mexican Peso</name>
+        <loc>Locations</loc>
+        <rate>23.7819</rate>
+    </currency>
+    <currency id="MYR">
+        <name>Malaysian Ringgit</name>
+        <loc>Locations</loc>
+        <rate>5.2532</rate>
+    </currency>
+    <currency id="NOK">
+        <name>Norwegian Krone</name>
+        <loc>Locations</loc>
+        <rate>10.2230</rate>
+    </currency>
+    <currency id="NZD">
+        <name>New Zealand Dollar</name>
+        <loc>Locations</loc>
+        <rate>1.7052</rate>
+    </currency>
+    <currency id="PHP">
+        <name>Philippine Peso</name>
+        <loc>Locations</loc>
+        <rate>60.7620</rate>
+    </currency>
+    <currency id="RUB">
+        <name>Russian Ruble</name>
+        <loc>Locations</loc>
+        <rate>80.6600</rate>
+    </currency>
+    <currency id="SEK">
+        <name>Swedish Krona</name>
+        <loc>Locations</loc>
+        <rate>11.1961</rate>
+    </currency>
+    <currency id="SGD">
+        <name>Singapore Dollar</name>
+        <loc>Locations</loc>
+        <rate>1.7267</rate>
+    </currency>
+    <currency id="THB">
+        <name>Thai Baht</name>
+        <loc>Locations</loc>
+        <rate>43.8190</rate>
+    </currency>
+    <currency id="TRY">
+        <name>CTurkish Lira</name>
+        <loc>Locations</loc>
+        <rate>3.9515</rate>
+    </currency>
+    <currency id="USD">
+        <name>US Dollar</name>
+        <loc>Locations</loc>
+        <rate>1.2514</rate>
+    </currency>
+    <currency id="ZAR">
+        <name>South African Rand</name>
+        <loc>Locations</loc>
+        <rate>16.9888</rate>
+    </currency>
+</currencies>

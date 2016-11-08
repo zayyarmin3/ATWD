@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+    <error id="1000">
+      <message>Currency type not recognized</message>
+    </error>
+    <error id="1100">
+      <message>Required parameter is missing</message>
+    </error>
+    <error id="1200">
+      <message>Parameter not recognized</message>
+    </error>
+    <error id="1300">
+      <message>Currency amount must be a decimal number</message>
+    </error>
+    <error id="1400">
+      <message>Error in service</message>
+    </error>
+    <error id="2000">
+      <message>Method not recognized or is missing</message>
+    </error>
+    <error id="2100">
+      <message>	Rate in wrong format or is missing</message>
+    </error>
+    <error id="2200">
+      <message>Currency code in wrong format or is missing</message>
+    </error>
+    <error id="2300">
+      <message>Country name in wrong format or is missing</message>
+    </error>
+    <error id="2400">
+      <message>Currency code not found for update</message>
+    </error>
+    <error id="2500">
+      <message>Error in service</message>
+    </error>
+</errors>
