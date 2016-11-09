@@ -19,7 +19,7 @@
       <message>Method not recognized or is missing</message>
     </error>
     <error id="2100">
-      <message>	Rate in wrong format or is missing</message>
+      <message>Rate in wrong format or is missing</message>
     </error>
     <error id="2200">
       <message>Currency code in wrong format or is missing</message>
@@ -32,5 +32,11 @@
     </error>
     <error id="2500">
       <message>Error in service</message>
+    </error>
+    <error id="2600">
+      <message>Currency name not found or is missing</message>
+    </error>
+    <error id="2700">
+      <message>Currency already exists</message>
     </error>
 </errors>

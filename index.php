@@ -26,10 +26,10 @@ if(count($_GET) < 4 ) { // first check if the parameter counts less then 4
   die();
 }
 
-if(!file_exists("rates.xml")) {
+if(!file_exists("rates.xml")) {// check if "rates.xml" is missing
   if(file_exists("config.php")) {
     require_once("config.php");
-    create(getYQLURI());
+    create(getYQLURI()); // create the file from the uri generated
   } else {
     echo $format == "json" ? getErrorConvJson("1400") : getErrorConvXML("1400"); // config.php is missing too. can't help anymore
     die();
@@ -61,7 +61,7 @@ if($from && $to && $from_amnt) {
     echo $format == "json" ? getErrorConvJson("1000") : getErrorConvXML("1000"); // currency type not recognized error
     die();
   }
-}else if($from_amnt == false) {
+} else if($from_amnt == false) {
     echo $format == "json" ? getErrorConvJson("1300") : getErrorConvXML("1300"); // currency type must be decimal error
     die();
 }
@@ -104,9 +104,8 @@ function getElementByID($elementName,$id,$url='rates.xml') {
   Get the time from currencies the rates.xml
 */
 function getTime() {
-  $xml = new DOMDocument();
-  $xml -> load("rates.xml");
-  return $xml -> getElementsByTagName("currencies")-> item(0)->getAttribute("at");
+  $xml = simplexml_load_file("rate.xml");
+  return $xml->xpath(string("currencies/@at"));
 }
 
 /*
@@ -118,7 +117,7 @@ function getErrorConvXML($id) {
   $response .= '<conv>';
   $response .= '<error>';
   $response .= '<code>'. $error['id']. '</code>';
-  $response .= '<message>'. $error ->message . '</message>';
+  $response .= '<message>'. $error -> message . '</message>';
   $response .= '</error>';
   $response .= '</conv>';
   return $response;
