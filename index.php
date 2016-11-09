@@ -104,8 +104,9 @@ function getElementByID($elementName,$id,$url='rates.xml') {
   Get the time from currencies the rates.xml
 */
 function getTime() {
-  $xml = simplexml_load_file("rate.xml");
-  return $xml->xpath(string("currencies/@at"));
+  $xml = new DOMDocument();
+  $xml -> load("rates.xml");
+  return $xml -> getElementsByTagName("currencies")-> item(0)->getAttribute("at");
 }
 
 /*
