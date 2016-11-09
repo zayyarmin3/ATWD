@@ -13,6 +13,14 @@
 
       $dom = new DOMDocument();
       $dom -> load("rates.xml");
+      $xpath = new DOMXPath($dom);
+      $query = "//currency[@id='{$code}']";
+      $ocurrency = $xpath -> query($query) -> item(0);
+
+      if($ocurrency != null) {
+        echo getError("2700"); // currency already exists
+        die();
+      }
 
       $currency = $dom -> createElement("currency");
 
