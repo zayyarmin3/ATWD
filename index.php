@@ -1,7 +1,7 @@
 <?php
 
 //-------------------Main Block---------------//
-
+date_default_timezone_set("GMT");
 $format = filter_input(INPUT_GET, 'format');
 /*
   To make sure there are only two formats even if invalid inputs is passed.
@@ -41,8 +41,7 @@ if(checkQueryVariable()) { // validate query variableNames are valid first
   $to = filter_input(INPUT_GET, 'to');
   $from_amnt = filter_input(INPUT_GET, 'amnt',FILTER_VALIDATE_FLOAT);
   $hours = (strtotime("now")-strtotime(getTime())) / 3600;
-
-  if($hours > 12) {
+  if($hours >= 12) {
     updateRates();
   }
 } else {
@@ -269,7 +268,7 @@ function create($uri) {
     $xmlDomFileOut = new DOMDocument("1.0","UTF-8");
     $currencies = $xmlDomFileOut -> createElement("currencies");
     $at = $xmlDomFileOut -> createAttribute('at');
-    $at -> value = date('d D M Y H:i');
+    $at -> value = date('d M Y H:i');
     $currencies -> appendChild($at);
     foreach($rates as $r) {
 
