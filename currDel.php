@@ -11,14 +11,21 @@
       $query = "//currency[@id='{$code}']";
       $currency = $xpath -> query($query) -> item(0);
       $currencies = $dom -> getElementsByTagName('currencies') -> item(0);
-      $currencies -> removeChild($currency);
-      $dom -> save("rates.xml");
-      $response = '<?xml version="1.0" encoding="UTF-8" ?>';
-      $response .= '<method type="DELETE">';
-      $response .= '<at>'.date("d D M Y H:i").'</at>';
-      $response .= '<code>'.$code.'</code>';
-      $response .= '</method>';
-      echo $response;
+      if($currency) {
+        $currencies -> removeChild($currency);
+        $dom -> save("rates.xml");
+        $response = '<?xml version="1.0" encoding="UTF-8" ?>';
+        $response .= '<method type="DELETE">';
+        $response .= '<at>'.date("d D M Y H:i").'</at>';
+        $response .= '<code>'.$code.'</code>';
+        $response .= '</method>';
+        echo $response;
+        die();
+      } else {
+        echo getError("2600"); // 2600 Currency Not Found
+        die();
+      }
+
       die();
     } else { // 2500 Error in service since rates.xml not found
       echo getError("2500");
