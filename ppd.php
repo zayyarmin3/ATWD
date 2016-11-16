@@ -9,12 +9,17 @@
 
         $('input[type=radio][name=method]').click(function(){
         var page=$(this).val();
-        if(page == "currPost.php" || page == "currPut.php") {
+        if(page == "currPut.php") {
           $('input[name=code]').prop('disabled',false);
           $('input[name=cname]').prop('disabled',false);
           $('input[name=rate]').prop('disabled',false);
           $('input[name=countries]').prop('disabled',false);
-        } else {
+        }else if(page == "currPost.php") {
+          $('input[name=code]').prop('disabled',false);
+          $('input[name=cname]').prop('disabled',false);
+          $('input[name=rate]').prop('disabled',false);
+          $('input[name=countries]').prop('disabled',true);
+        }  else {
           $('input[name=code]').prop('disabled',false);
           $('input[name=cname]').prop('disabled',true);
           $('input[name=rate]').prop('disabled',true);
@@ -80,13 +85,18 @@
     div.response {
       width:30%;
     }
+	#response {
+		padding: 12px 20px;
+		 border-color: #000000;
+		border-radius : 20px;
+	}
   </style>
   <body>
     <div class="form">
       <form action="ppd.php" method="post" id="requestForm">
         Form interfce for POST, PUT &amp; DELETE<br>
-         <input  type="radio" name="method" value="currPost.php" checked="checked"/>Post
-         <input type="radio" name="method" value="currPut.php"/>Put
+         <input  type="radio" name="method" value="currPost.php" />Post
+         <input type="radio" name="method" value="currPut.php" checked="checked"/>Put
          <input type="radio" name="method" value="currDel.php"/>Delete<br>
          Currency Code<br>
          <input type="text" name="code" placeholder="code" style="width: 30%"/><br>

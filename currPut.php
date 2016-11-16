@@ -20,6 +20,9 @@
       if($ocurrency != null) {
         echo getError("2700"); // currency already exists
         die();
+      } else if($ocurrency == null && isInISO($code) == false) {
+        echo getError("2800"); // currency not recognized by ISO
+        die();
       }
 
       $currency = $dom -> createElement("currency");
@@ -27,7 +30,7 @@
       //children of currency
       $currencyID = $dom -> createAttribute('id');
       $currencyID -> value = $code;
-      $rateNode = $dom -> createElement("rate",number_format($rate,4));
+      $rateNode = $dom -> createElement("rate",number_format($rate,4,'.',''));
       $codeNameNode = $dom -> createElement("name", $name);
       $locNode = $dom -> createElement("loc", $loc);
 
@@ -98,6 +101,21 @@
     $response .= '</method>';
     return $response;
   }
+
+  /*
+    Check if the code is included in ISO list
+    Return true if exists, else false
+  */
+  function isInISO($code) {
+    $xml  = simplexml_load_file('http://www.currency-iso.org/dam/downloads/lists/list_one.xml');
+    $result = $xml -> xpath("//CcyNtry[Ccy='{$code}']");
+    if($result != null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
   // Functions Blcok ends
 

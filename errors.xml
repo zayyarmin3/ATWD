@@ -34,9 +34,12 @@
       <message>Error in service</message>
     </error>
     <error id="2600">
-      <message>Currency name not found or is missing</message>
+      <message>Currency not found</message>
     </error>
     <error id="2700">
       <message>Currency already exists</message>
+    </error>
+    <error id="2800">
+      <message>Currency not included in ISO</message>
     </error>
 </errors>

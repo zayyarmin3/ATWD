@@ -16,7 +16,8 @@
       $xpath = new DOMXPath($dom);
       $query = "//currency[@id='{$code}']";
       $currency = $xpath -> query($query) ->item(0);
-      $currencies = $dom -> getElementsByTagName('currencies') -> item(0);
+	  if($currency) {
+        $currencies = $dom -> getElementsByTagName('currencies') -> item(0);
 
       $orate = $currency -> getElementsByTagName('rate') -> item(0);
       $oloc = $currency -> getElementsByTagName('loc') -> item(0);
@@ -54,6 +55,11 @@
 
       echo $response;
       die();
+      } else {
+        echo getError("2600"); // 2600 Currency Not Found
+        die();
+      }
+      
     } else { // 2500 Error in service since rates.xml not found
       echo getError("2500");
       die();
