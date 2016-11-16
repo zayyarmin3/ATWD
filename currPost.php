@@ -36,7 +36,7 @@
       $response .= '</curr>';
       $response .= '</previous>';
       $response .= '<new>';
-      $response .= '<rate>'.number_format($rate,4).'</rate>';
+      $response .= '<rate>'.number_format($rate,4,'.','').'</rate>';
       $response .= '<curr>';
       $response .= '<code>'.$code.'</code>';
       $response .= '<name>'.$name.'</name>';
@@ -45,7 +45,7 @@
       $response .= '</new>';
       $response .= '</method>';
 
-      $orate -> nodeValue = number_format($rate,4);
+      $orate -> nodeValue = number_format($rate,4,'.','');
       $oname -> nodeValue = $name;
       $oloc -> nodeValue = $loc;
 
@@ -59,7 +59,7 @@
         echo getError("2600"); // 2600 Currency Not Found
         die();
       }
-      
+
     } else { // 2500 Error in service since rates.xml not found
       echo getError("2500");
       die();
