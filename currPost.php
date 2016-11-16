@@ -4,7 +4,7 @@
   $name = filter_input(INPUT_POST,'cname');
   $rate = filter_input(INPUT_POST, 'rate', FILTER_VALIDATE_FLOAT);
   $loc = filter_input(INPUT_POST,'countries');
-  if($code && $name && $rate && $loc) {
+  if($code && $name && $rate) {
     if(file_exists("rates.xml")) {
       $code = strtoupper($code);
       $name = ucwords(strtolower($name));
@@ -69,9 +69,6 @@
     die();
   } else if ($code == null) { // 2200 Currency code in wrong format or is missing
     echo getError("2200");
-    die();
-  } else if ($loc == null) { // 2300 Country name in wrong format or is missing
-    echo getError("2300");
     die();
   } else if ($name == null) { // 2600 Currency name in wrong format or is missing
     echo getError("2600");
