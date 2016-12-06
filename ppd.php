@@ -37,10 +37,10 @@
               url: page,
               data: $('#requestForm').serialize(),
               success: function(data){
-                $('#response').val(data);
+                $('#responsetxt').val(data);
               },
               error:function(data){
-                $('#response').val("server no response");
+                $('#responsetxt').val("server no response");
               },
               beforeSend: function(e) {
                 $('#submitBtn').prop("disabled",true);
@@ -85,7 +85,7 @@
     div.response {
       width:30%;
     }
-	#response {
+	#responsetxt {
 		padding: 12px 20px;
 		 border-color: #000000;
 		border-radius : 20px;
@@ -95,8 +95,8 @@
     <div class="form">
       <form action="ppd.php" method="post" id="requestForm">
         Form interfce for POST, PUT &amp; DELETE<br>
-         <input  type="radio" name="method" value="currPost.php" />Post
          <input type="radio" name="method" value="currPut.php" checked="checked"/>Put
+         <input  type="radio" name="method" value="currPost.php" />Post
          <input type="radio" name="method" value="currDel.php"/>Delete<br>
          Currency Code<br>
          <input type="text" name="code" placeholder="code" style="width: 30%"/><br>
@@ -114,7 +114,7 @@
       <br>
       <div class="response">
       Response Message:<br>
-      <textarea id="response" rows="20" cols="80" placeholder="Response XML"></textarea>
+      <textarea id="responsetxt" rows="20" cols="80" placeholder="Response XML"></textarea>
       </div>
 
 

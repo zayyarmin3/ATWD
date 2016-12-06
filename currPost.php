@@ -1,5 +1,6 @@
 <?php
   /////////////Main block starts
+  require_once("function.php");
   $code = filter_input(INPUT_POST,'code');
   $name = filter_input(INPUT_POST,'cname');
   $rate = filter_input(INPUT_POST, 'rate', FILTER_VALIDATE_FLOAT);
@@ -86,26 +87,6 @@
 
   ///////////////////////////////////////////////////
 
-  //Functions blcok starts
-
-  /*
-    Get Error String in xml format
-  */
-  function getError($id) {
-    $xml = simplexml_load_file("errors.xml");
-    $result = $xml -> xpath("//error[@id='{$id}']");
-    $error = $result[0];
-    $response = '<?xml version="1.0" encoding="UTF-8" ?>';
-    $response .= '<method type="PUT">';
-    $response .= '<error>';
-    $response .= '<code>'. $error['id'].'</code>';
-    $response .= '<msg>'.$error -> message .'</msg>';
-    $response .= '</error>';
-    $response .= '</method>';
-    return $response;
-  }
-
-  // Functions Blcok ends
 
 
 
