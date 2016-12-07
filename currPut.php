@@ -19,10 +19,10 @@
       $ocurrency = $xpath -> query($query) -> item(0);
 
       if($ocurrency != null) {
-        echo getError("2700"); // currency already exists
+        echo getError("2700","PUT"); // currency already exists
         die();
       } else if($ocurrency == null && isInISO($code) == false) {
-        echo getError("2800"); // currency not recognized by ISO
+        echo getError("2800","PUT"); // currency not recognized by ISO
         die();
       }
 
@@ -56,20 +56,20 @@
       echo $response;
       die();
     } else { // 2500 Error in service since rates.xml not found
-      echo getError("2500");
+      echo getError("2500","PUT");
       die();
     }
   } else if ($rate == null) { // 2100 Rate in wrong format or is missing
-    echo getError("2100");
+    echo getError("2100","PUT");
     die();
   } else if ($code == null) { // 2200 Currency code in wrong format or is missing
-    echo getError("2200");
+    echo getError("2200","PUT");
     die();
   } else if ($loc == null) { // 2300 Country name in wrong format or is missing
-    echo getError("2300");
+    echo getError("2300","PUT");
     die();
   } else if ($name == null) { // 2600 Currency name in wrong format or is missing
-    echo getError("2600");
+    echo getError("2600","PUT");
     die();
   }
   /*

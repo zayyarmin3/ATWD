@@ -249,12 +249,12 @@ function create($uri) {
   /*
     Get Error String in xml format
   */
-  function getError($id) {
+  function getError($id,$method) {
     $xml = simplexml_load_file("errors.xml");
     $result = $xml -> xpath("//error[@id='{$id}']");
     $error = $result[0];
     $response = '<?xml version="1.0" encoding="UTF-8" ?>';
-    $response .= '<method type="PUT">';
+    $response .= '<method type="'.$method.'">';
     $response .= '<error>';
     $response .= '<code>'. $error['id'].'</code>';
     $response .= '<msg>'.$error -> message .'</msg>';

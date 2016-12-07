@@ -57,22 +57,22 @@
       echo $response;
       die();
       } else {
-        echo getError("2600"); // 2600 Currency Not Found
+        echo getError("2600","POST"); // 2600 Currency Not Found
         die();
       }
 
     } else { // 2500 Error in service since rates.xml not found
-      echo getError("2500");
+      echo getError("2500","POST");
       die();
     }
   } else if ($rate == null) { // 2100 Rate in wrong format or is missing
-    echo getError("2100");
+    echo getError("2100","POST");
     die();
   } else if ($code == null) { // 2200 Currency code in wrong format or is missing
-    echo getError("2200");
+    echo getError("2200","POST");
     die();
   } else if ($name == null) { // 2600 Currency name in wrong format or is missing
-    echo getError("2600");
+    echo getError("2600","POST");
     die();
   }
   /*

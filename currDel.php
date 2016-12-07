@@ -23,15 +23,15 @@
         echo $response;
         die();
       } else {
-        echo getError("2600"); // 2600 Currency Not Found
+        echo getError("2600","DELETE"); // 2600 Currency Not Found
         die();
       }
     } else { // 2500 Error in service since rates.xml not found
-      echo getError("2500");
+      echo getError("2500","DELETE");
       die();
     }
   }else if ($code == null) { // 2200 Currency code in wrong format or is missing
-    echo getError("2200");
+    echo getError("2200","DELETE");
     die();
   }
   /*

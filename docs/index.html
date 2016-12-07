@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>ATWD1 Assignment: Zay Yar Min-16027369</title>
+<style type="text/css">
+.tbl-layout {
+	border-collapse: collapse;
+	border: 1px solid #808080;
+}
+.cell-header {
+	color: #FFFFFF;
+	background-color: #3333FF;
+}
+.cell-back {
+	background-color: #C0C0C0;
+}
+</style>
+</head>
+
+<body>
+<h4>Username: z2-min | ID: 16027369</h4>
+<p><strong>Test Outcomes: (outcome is either pass or fail)</strong></p>
+<table cellpadding="3" class="tbl-layout" style="width: 640
+px">
+	<tr>
+		<th class="cell-header" style="height: 25px">Test</td>
+		<th style="height: 25px" class="cell-header">Outcome </td>
+		<th style="height: 25px; width: 189px;" class="cell-header">Comment</td>
+	</tr>
+	<tr>
+		<td style="height: 25px">1. Return XML converting 10.35 from GBP to EUR</td>
+		<td style="height: 25px">pass </td>
+		<td style="height: 25px; width: 189px"></td>
+	</tr>
+	<tr>
+		<td class="cell-back">2. Return JSON converting 14.85 from NOK to DKK</td>
+		<td class="cell-back">pass</td>
+		<td style="width: 189px" class="cell-back">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="height: 25px">3. Error 1 - currency not recognized - return 
+		1000</td>
+		<td style="height: 25px">pass</td>
+		<td style="height: 25px; width: 189px;"></td>
+	</tr>
+	<tr>
+		<td class="cell-back">4. Error 2 - no parameters - return 1100</td>
+		<td class="cell-back">pass</td>
+		<td style="width: 189px" class="cell-back">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>5. Error 3 - missing parameter - return 1100</td>
+		<td>pass</td>
+		<td style="width: 189px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="cell-back">6. Error 4 - too many parameters - return 1200</td>
+		<td class="cell-back">pass</td>
+		<td style="width: 189px" class="cell-back">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="height: 25px">7. Error 5 - format value is not &apos;xml&apos; or &apos;json&apos; - return 1200</td>
+		<td style="height: 25px">pass</td>
+		<td style="width: 189px; height: 25px;"></td>
+	</tr>
+	<tr>
+		<td class="cell-back" style="height: 25px">8. Error 6 - amnt not a 
+		decimal number - return 1300</td>
+		<td class="cell-back" style="height: 25px">pass</td>
+		<td class="cell-back" style="width: 189px; height: 25px;"></td>
+	</tr>
+	<tr>
+		<td style="height: 25px">9. Error 7 - you will have to make a file 
+		unavailable (for instance) to <br>re-create this error - 
+		return 1400</td>
+		<td style="height: 25px">fail </td>
+		<td style="height: 25px; width: 189px;">Fatal Error - not reproduced.</td>
+	</tr>
+</table>
+<p><strong>Links to Service:</strong></p>
+<p>Live Service - convert 105.33 from NOK to TRY and format as XML:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/?from=NOK&amp;to=TRY&amp;amnt=105.33&amp;format=xml" target="_blank">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/?from=NOK&amp;to=TRY&amp;amnt=105.33&amp;format=xml</a></p>
+<p>Live Service - convert 23.63458 from HUF to INR and format as JSON:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/?from=HUF&amp;to=INR&amp;amnt=23.63458&amp;format=json">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/?from=HUF&amp;to=INR&amp;amnt=23.63458&amp;format=json</a></p>
+<p>Link to Update Form:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/update_form.php">http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/update_form.php</a></p>
+<p><strong>Links to Data Files:</strong></p>
+<p>Rates File:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/rates.xml">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/data/rates.xml</a></p>
+<p><strong>Links to PHP source files: </strong></p>
+<p>Main index file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/index.php">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/index.php</a></p>
+<p>Functions file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/function.php">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/function.php</a></p>
+<p>POST form handling file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/currPost.php">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/currPost.php</a></p>
+<p>PUT form handling file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/currPut.php">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/currPut.php</a></p>
+<p>DELETE from form file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/currPut.php">
+http://isa.cems.uwe.ac.uk/~z2-min/atwd1/assignment/docs/source/currDel.php</a></p>
+
+<hr>
+<p><strong>Critical Evaluation</strong></p>
+<p>
+	<strong>
+		Advantages/disadvantages of the REST compaired to SOAP and XML RPC?
+	</strong>
+</p>
+	<p>
+		REST represents the representational state transfer. "An architectural style for networked hypermedia applications, it is primarily used to build Web services that are lightweight, maintainable, and scalable"(Vaqqas, 2014).SOAP is the acronym of simpel object access protocol. "SOAP is a standards-based Web services access protocol that has been around for a while and enjoys all of the benefits of long-term use"(Mueller, 2013).RPC means Remote procedure call. "Remote Procedure Call (RPC) is a protocol that one program can use to request a service from a program located in another computer on a network without having to understand the network's details"(Rouse, 2016). 
+	</p>
+<p>
+	<strong>
+		REST vs SOAP
+	</strong>
+</p>
+	<p>
+		SOAP is not simple as its name.
+		SOAP is based on standards. 
+		Developers need to understand SOAP works. 
+		Also SOAP depends on programming languages. 
+		It is a heavy weight protocol.
+		On the other hand REST is simpler than SOAP. 
+		Need no basic knowledge. 
+		A RESTful service can be implemented easily without any standards. 
+		It is light weight and greately extensible and scalable.
+	</p>
+<p>
+	<strong>
+		REST vs RPC
+	</strong>
+</p>
+	<p>
+		RPC is a protocol that clients can use to request a function or a procedure in a program.
+		A program may be in the same or another netowrk. 
+		REST architecture is similar to RPC. 
+		REST is the architecture style on the other hand, RPC is a protocol.
+		It is hard to compare since they are of different type.
+		REST can be implemented in top of the RPC system.
+		Just to create GET,POST,PUT and DELETE procedures.
+	</p>
+	<strong>Extending and Improving the Application</strong>
+	<p>
+		This system is a web api. 
+		The system may be extended in various way. 
+		We can build a website showing live currency conversion based on this API. 
+		Also we can even build mobile applications using this api.
+		So that people can check on the go using their mobile devices.
+	</p>
+
+<p>
+	<strong>Promotion and code re-use</strong>
+</p>
+<p>
+	I have written the rquired functions in the function.php file for further reusable purpose.
+	isInISO() ,getElementbyID() and getDOMElementbyID() are the useful functions. 
+	isInISO() function is called when user wants to insert new currency. 
+	It checks if the input currency is in ISO supported currencies.
+	getElementbyID() is used to get a simple xml element which is defined by id attribute. 
+	getDOMElementbyID() is used to get a dom xml element which is defiend by id attribute.
+	These functions are useful and flexible that can be use for any xml document.
+	The user only has to set id attribute and can get the node or element by id value. 
+</p>
+<hr>
+<p>
+	<strong>References</strong>
+</p>
+<p>
+<pre>
+Singh, T. (2009) REST vs. SOAP – the right WebService. Available at: http://geeknizer.com/rest-vs-soap-using-http-choosing-the-right-webservice-protocol/#ixzz1PDKEB98H (Accessed: 6 December 2016).
+
+Trautmann, T. (2012) Debunking the myths of RPC & REST. Available at: http://etherealbits.com/2012/12/debunking-the-myths-of-rpc-rest/ (Accessed: 6 December 2016).
+
+Mueller, J. (2013) Understanding SOAP and REST basics and differences. Available at: http://blog.smartbear.com/apis/understanding-soap-and-rest-basics/ (Accessed: 6 December 2016).
+
+Marshall, D. (1999) Remote procedure calls (RPC). Available at: https://users.cs.cf.ac.uk/Dave.Marshall/C/node33.html (Accessed: 6 December 2016).
+
+Rouse, M. (2016) What is remote procedure call (RPC)? - definition from WhatIs.Com. Available at: http://searchsoa.techtarget.com/definition/Remote-Procedure-Call (Accessed: 6 December 2016).
+
+Vaqqas, M. (2014) RESTful web services: A Tutorial. Available at: http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069 (Accessed: 6 December 2016).
+
+</pre>
+
+</p>
+<hr>
+<p>&nbsp;</p>
+</body>
+
+</html>
