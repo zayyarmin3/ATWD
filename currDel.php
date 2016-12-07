@@ -26,8 +26,6 @@
         echo getError("2600"); // 2600 Currency Not Found
         die();
       }
-
-      die();
     } else { // 2500 Error in service since rates.xml not found
       echo getError("2500");
       die();
